@@ -33,7 +33,7 @@ func main() {
 		// close(results)
 	}()
 	for result := range results {
-	fmt.Println("Result:java", result)
+	fmt.Println("Result:go", result)
 	}
 }
 
