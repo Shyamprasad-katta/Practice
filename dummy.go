@@ -20,8 +20,7 @@ func main() {
 	var wg sync.WaitGroup
 
 	for j := 0; j < 3; j++ {
-		wg.Add(1)
-		go Worker(j, jobs, results, &wg)
+		wg.Add(go Worker(j, jobs, results, &wg)
 	}
 	for i := 0; i < 10; i++ {
 		jobs <- i
@@ -34,26 +33,9 @@ func main() {
 		// close(results)
 	}()
 	for result := range results {
-		fmt.Println("Result:", result)
+	fmt.Println("Result:java", result)
 	}
 }
-A
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
